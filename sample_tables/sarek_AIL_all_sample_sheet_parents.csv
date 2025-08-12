@@ -1,0 +1,3 @@
+patient,status,sample,lane,fastq_1,fastq_2
+parental_1,0,parental_1,ol,/cfs/klemming/projects/snic/sllstore2017078/lech/sarek/parental_bam_data/extracted_fastq/F3-F5-BC-Paired_1_extracted_1.fastq.gz,/cfs/klemming/projects/snic/sllstore2017078/lech/sarek/parental_bam_data/extracted_fastq/F3-F5-BC-Paired_1_extracted_2.fastq.gz
+parental_2,0,parental_2,ol,/cfs/klemming/projects/snic/sllstore2017078/lech/sarek/parental_bam_data/extracted_fastq/F3-F5-BC-Paired_2_extracted_1.fastq.gz,/cfs/klemming/projects/snic/sllstore2017078/lech/sarek/parental_bam_data/extracted_fastq/F3-F5-BC-Paired_2_extracted_2.fastq.gz

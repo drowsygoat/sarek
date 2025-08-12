@@ -1,0 +1,17 @@
+{
+    "input": "/cfs/klemming/projects/snic/sllstore2017078/lech/sarek/sample_tables/sarek_markduplicates_ID_capitalized.csv",
+    "outdir": "\/cfs\/klemming\/projects\/supr\/sllstore2017078\/lech\/sarek\/AIL_haplotypecaller\/run1_with_haplotypecaller",
+    "genome": "",
+    "no_intervals": false,
+    "tools": "haplotypecaller",
+    "save_mapped": false,
+    "concatenate_vcfs": true,
+    "joint_germline": true,
+    "save_output_as_bam": true,
+    "known_indels_vqsr": false,
+    "known_snps_vqsr": false,
+    "ngscheckmate_bed": false,
+    "fasta": "/cfs/klemming/projects/snic/sllstore2017078/lech/sarek/refs/112/genome/Gallus_gallus.bGalGal1.mat.broiler.GRCg7b.dna_sm.toplevel.fa",
+    "igenomes_ignore": true,
+    "aligner": "bwa-mem"
+}
