@@ -1,0 +1,2 @@
+patient,status,sample,bam,bai
+ID34,0,ID34,/cfs/klemming/projects/snic/sllstore2017078/lech/RR/scAnalysis/single_cell_gal7b/count_arc/ID34/outs/atac_possorted_bam.bam,/cfs/klemming/projects/snic/sllstore2017078/lech/RR/scAnalysis/single_cell_gal7b/count_arc/ID34/outs/atac_possorted_bam.bam.bai

@@ -1,0 +1,1 @@
+Scripts used to prepare parental solid data, using samtools and bbmap suite
