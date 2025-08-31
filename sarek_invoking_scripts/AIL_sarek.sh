@@ -36,8 +36,6 @@ nextflow run nf-core/sarek \
     --project=${COMPUTE_ACCOUNT} \
     --email=${USER_E_MAIL}
 
-
-
 # WARN: If GATK's Haplotypecaller, Sentieon's Dnascope or Sentieon's Haplotyper is specified, without `--dbsnp` or `--known_indels no filtering will be done. For filtering
 # , please provide at least one of `--dbsnp` or `--known_indels`.                     
 # For more information see FilterVariantTranches (single-sample, default): https://gatk.broadinstitute.org/hc/en-us/articles/5358928898971-FilterVariantTranches

@@ -32,7 +32,7 @@ process_file() {
 
     export input output input2 output2 outs
 
-    $RUN_COMMAND -J "$JOB_NAME" -p "$PARTITION" -n "$TASKS" -t "$TIME" -N "$NODES" -c "$CPUS" -d "$DRY" -o $MODULES \
+    $RUN_COMMAND -J "$JOB_NAME" -p "$PARTITION" -n "$TASKS" -t "$TIME" -N "$NODES" -c "$CPUS" -d "$DRY" -o $MODULES -- \
     'reformat.sh in=${input} out1=${output} out2=${output2} -eoom -Xmx64g usejni=t'
 }
 

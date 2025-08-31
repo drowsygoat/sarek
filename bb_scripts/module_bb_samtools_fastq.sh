@@ -30,7 +30,7 @@ process_file() {
 
     export input output output2
 
-    $RUN_COMMAND -J "$JOB_NAME" -p "$PARTITION" -n "$TASKS" -t "$TIME" -N "$NODES" -c "$CPUS" -d "$DRY" -o $MODULES \
+    $RUN_COMMAND -J "$JOB_NAME" -p "$PARTITION" -n "$TASKS" -t "$TIME" -N "$NODES" -c "$CPUS" -d "$DRY" -o $MODULES -- \
     'samtools fastq \
     -1 ${output}  \
     -2 ${output2} \

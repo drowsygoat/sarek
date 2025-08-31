@@ -34,7 +34,7 @@ process_file() {
 
     export input output input2 output2 outs
 
-    $RUN_COMMAND -J "$JOB_NAME" -p "$PARTITION" -n "$TASKS" -t "$TIME" -N "$NODES" -c "$CPUS" -d "$DRY" -o $MODULES \
+    $RUN_COMMAND -J "$JOB_NAME" -p "$PARTITION" -n "$TASKS" -t "$TIME" -N "$NODES" -c "$CPUS" -d "$DRY" -o $MODULES -- \
     'repair.sh in1=${input} in2=${input2} out1=${output} out2=${output2} outs=${outs} ain=t -eoom -Xmx10g usejni=t'
 }
 
