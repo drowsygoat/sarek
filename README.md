@@ -1,6 +1,7 @@
 # SAREK Workflow Overview
 
-This repository provides scripts, sample tables, and configuration JSONs to run the **SAREK pipeline** for variant calling.  
+This repository provides scripts, sample tables, and configuration JSONs to run the **SAREK pipeline** for calling variant from AIL data. 
+
 Below is a high-level overview of the workflow.
 
 ---
@@ -13,7 +14,10 @@ Run SAREK with **Strelka**, **DeepVariant**, and **FreeBayes**:
   `sarek_invoking_scripts/AIL_sarek.sh`
 
 - Config file:  
-  `sarek/sarek_configs/ail_params_no_GATK.json`
+  `sarek_configs/ail_params_no_GATK.json`
+
+- Input files:  
+  `Fastq files (see sample tables)`
 
 This step generates variant calls from three independent callers.
 
@@ -24,8 +28,8 @@ This step generates variant calls from three independent callers.
 Create a **consensus set of high-confidence variants** by intersecting calls from all three variant callers.
 
 - Scripts:  
-  - `sarek/get_known_sites/module_make_known_sites_VCF.sh`  
-  - `sarek/get_known_sites/module_isec_merge_known_sites_VCF.sh`
+  - `get_known_sites/module_make_known_sites_VCF.sh`  
+  - `get_known_sites/module_isec_merge_known_sites_VCF.sh`
 
 This produces the **known_sites VCF** used for downstream base quality recalibration and haplotype calling.
 
@@ -39,7 +43,10 @@ Run SAREK with **GATK HaplotypeCaller**, using the consensus `known_sites` VCF g
   `sarek_invoking_scripts/AIL_haplotypcaller.sh`
 
 - Config file:  
-  `sarek/sarek_configs/ail_params_with_haplotypecaller.json`
+  `sarek_configs/ail_params_with_haplotypecaller.json`
+
+- Input files:  
+  `BAM files generated in Step 1`
 
 This step improves variant calling accuracy by leveraging the known sites.
 
@@ -59,11 +66,3 @@ This step improves variant calling accuracy by leveraging the known sites.
 1. **Run SAREK** with Strelka, DeepVariant, FreeBayes → produce initial variant calls.  
 2. **Intersect variants** → generate consensus `known_sites` VCF.  
 3. **Run SAREK with GATK HaplotypeCaller** using consensus known_sites.  
-4. (Optional) Parental analysis without base recalibration; update `bb_scripts` as needed.
-
----
-
-## Documentation
-
-- Each script and configuration JSON has specific usage instructions.  
-- This README provides only the **general workflow overview**.
